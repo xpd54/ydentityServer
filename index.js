@@ -1,7 +1,7 @@
 const express = require("express")
 const mongose = require("mongoose")
 const { getServices, addService } = require("./service/service")
-const mongoURI = "mongodb://localhost:27017"
+const mongoURI = "mongodb://mongo:27017"
 app = express()
 app.use(express.json())
 app.get("/",(req, res)=> {
