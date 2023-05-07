@@ -14,9 +14,9 @@ app.get("/getAllServices", async (req, res) => {
     return res.send(services)
 })
 
-app.post("/addService", (req, res) => {
+app.post("/addService", async(req, res) => {
     const {title, email, auth, logo} = req.body
-    addService(title, email, auth, logo)
+    await addService(title, email, auth, logo)
     res.send("done")
 })
 

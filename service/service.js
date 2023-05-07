@@ -1,11 +1,7 @@
 const {save, getAllServices} = require("../controller/saveDb")
-const addService = function(title, email, auth, logo) {
-    savePersistent({title, email, auth, logo})
-    return
-}
 
-const savePersistent = async function(data) {
-    await save(data)
+const addService = async function(title, email, auth, logo) {
+    await save({title, email, auth, logo})
 }
 
 const getServices = async function(id) {
