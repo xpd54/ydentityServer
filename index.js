@@ -1,6 +1,6 @@
 const express = require("express")
 const mongose = require("mongoose")
-const { getServices } = require("./service/service")
+const { getServices, addService } = require("./service/service")
 const mongoURI = "mongodb://localhost:27017"
 app = express()
 app.use(express.json())
@@ -12,6 +12,12 @@ app.get("/getAllServices", async (req, res) => {
     const {id} = req.body
     const services = await getServices(1)
     return res.send(services)
+})
+
+app.post("/addService", (req, res) => {
+    const {title, email, auth, logo} = req.body
+    addService(title, email, auth, logo)
+    res.send("done")
 })
 
 const port = 3000
