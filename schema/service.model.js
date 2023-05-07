@@ -2,16 +2,14 @@ const { mongoose } = require("mongoose")
 const schema = mongoose.Schema
 const service = new schema({
     title: {
-        type: Number, 
-        default: 0
+        type: String,
     },
     email: {
-        type: Number,
-        default: 0
+        type: String,
     },
     logo: {
-        type: Number,
-        default: 0
+        type: String,
+        default: "https://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-2-1024.png"
     }
 })
 
