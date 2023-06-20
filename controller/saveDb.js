@@ -5,7 +5,7 @@ const save = async function(data) {
     await newEntry.save()
 }
 
-const getAllServices = async function(id) {
+const getAllServices = async function() {
     const services = await serviceModel.find()
     return services
 }
